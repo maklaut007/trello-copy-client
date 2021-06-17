@@ -36,7 +36,7 @@ export const deleteBoard = (payload) => {
 }
 export const fetchSignUp = (data) => {
   return (dispatch) => {
-    fetch('https://trello-zm.herokuapp.com/user/signup', {
+    fetch('https://trelloclone-zm.herokuapp.com/user/signup', {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -59,7 +59,7 @@ export const fetchSignUp = (data) => {
 export const fetchLogIn = (data) => {
   return (dispatch) => {
     
-    fetch('https://trello-zm.herokuapp.com/user/login', {
+    fetch('https://trelloclone-zm.herokuapp.com/user/login', {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -109,7 +109,7 @@ export const requestBoardsList = (data) => {
   
   return (dispatch) => {
      
-    fetch(`https://trello-zm.herokuapp.com/getboards/${adress[1]}`)
+    fetch(`https://trelloclone-zm.herokuapp.com/getboards/${adress[1]}`)
     .then((res)=>checkStatus(res))
     .then((res)=>res.json())
     .then((cb)=>{
@@ -120,7 +120,7 @@ export const requestBoardsList = (data) => {
 };
 export const deleteBoardRequest = (data) => {
   return (dispatch) => {
-     fetch(`https://trello-zm.herokuapp.com/boards/deleteBoard`, {
+     fetch(`https://trelloclone-zm.herokuapp.com/boards/deleteBoard`, {
       method: "DELETE",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -141,7 +141,7 @@ export const requestCardsAndLists = (data) => {
   let adress= /b\/([a-z1-9]+)/.exec(window.location.href) 
   console.log(adress[1])
   return (dispatch) => {
-    fetch(`https://trello-zm.herokuapp.com/${adress[1]}`)
+    fetch(`https://trelloclone-zm.herokuapp.com/${adress[1]}`)
     .then((res)=>checkStatus(res))
     .then((res)=>res.json())
     .then((cb)=>{
@@ -171,7 +171,7 @@ export const sendListToServer = (data) => {
 };
 export const sendChangedList = (data) => {
   return (dispatch) => {  
-    fetch('https://trello-zm.herokuapp.com/b/updatecards', {
+    fetch('https://trelloclone-zm.herokuapp.com/b/updatecards', {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -191,7 +191,7 @@ export const deleteListRequest = (data) => {
   console.log(99)
   return (dispatch) => {
     
-    fetch('https://trello-zm.herokuapp.com/b/deleteList', {
+    fetch('https://trelloclone-zm.herokuapp.com/b/deleteList', {
       method: "DELETE",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -210,7 +210,7 @@ export const deleteListRequest = (data) => {
 //Card
 export const sendCardToServer = (data) => {
   return (dispatch) => {
-    fetch('https://trello-zm.herokuapp.com/b/newCard', {
+    fetch('https://trelloclone-zm.herokuapp.com/b/newCard', {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -230,7 +230,7 @@ export const sendCardToServer = (data) => {
 export const deleteCardRequest = (data) => {
   console.log(data, 73)
   return (dispatch) => {
-    fetch('https://trello-zm.herokuapp.com/b/deleteCard', {
+    fetch('https://trelloclone-zm.herokuapp.com/b/deleteCard', {
       method: "DELETE",
       headers:{
         'Accept': 'application/json, text/plain',
