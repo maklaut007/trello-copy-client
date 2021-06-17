@@ -20,7 +20,7 @@ class Board extends Component {
   render() {
 
     return (
-	    <a href={`https://trelloclone-zm.herokuapp.com/b/${this.props.id}`} className="boards-menu__item board">
+	    <a href={`https://trello-client-zm.herokuapp.com/b/${this.props.id}`} className="boards-menu__item board">
 	    	 {this.cutBoardName(this.props.name)}
          <button type="button" onClick={this.deleteBoard} className="delete-board cancel-button"></button>
 	    </a>

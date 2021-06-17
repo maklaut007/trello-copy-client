@@ -33,7 +33,7 @@ class SignUp extends Component {
 			<div className="signup-page">
 				<div className="signup-page__wrapper">
 					<h1 className="signup-page-header">Create an account</h1>  
-					<a className="login-link" href="https://trelloclone-zm.herokuapp.com/login">or log in</a>  {/*change adress*/}
+					<a className="login-link" href="https://trello-client-zm.herokuapp.com/user/login">or log in</a>  {/*change adress*/}
 					<form onSubmit={this.handleSubmit}>
 						<label htmlFor="name">Name</label>
 						<input className="signup-page-input" type="text" name="name" id="name" onChange={this.handleChange}/>
