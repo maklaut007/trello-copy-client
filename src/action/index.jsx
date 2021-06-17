@@ -47,7 +47,7 @@ export const fetchSignUp = (data) => {
     .then((res)=>checkStatus(res))
     .then((res)=>res.json())
     .then((cb)=>{
-      window.location.href = "http://localhost:3000/boards"/*+cb.adressName*/              //Change to url
+      window.location.href = "https://trelloclone-zm.herokuapp.com/boards"/*+cb.adressName*/              //Change to url
     })
     .catch((err)=>{
       console.log(err)
@@ -71,7 +71,7 @@ export const fetchLogIn = (data) => {
     .then((res)=>res.json())
     .then((cb)=>{
       dispatch(authSuccess(cb));
-      window.location.href = "http://localhost:3000/boards/"+ cb.adressName
+      window.location.href = "https://trelloclone-zm.herokuapp.com/boards/"+ cb.adressName
     })
     .catch((err)=>{
       console.log(err)
