@@ -109,7 +109,7 @@ export const requestBoardsList = (data) => {
   
   return (dispatch) => {
      
-    fetch(`https://trelloclone-zm.herokuapp.com/boards/${adress[1]}`)
+    fetch(`https://trelloclone-zm.herokuapp.com/boards/getboards/${adress[1]}`)
     .then((res)=>checkStatus(res))
     .then((res)=>res.json())
     .then((cb)=>{
