@@ -125,7 +125,7 @@ export const deleteBoardRequest = (data) => {
       headers:{
         'Accept': 'application/json, text/plain',
         'Content-type':'application/json',
-        /*'Authorization': `bearer ${localStorage.getItem("token")}`*/ 
+        'Authorization': `bearer ${localStorage.getItem("token")}`
       },  
       body: JSON.stringify(data)
     })
