@@ -121,7 +121,7 @@ export const requestBoardsList = (data) => {
 export const deleteBoardRequest = (data) => {
   return (dispatch) => {
      fetch(`https://trelloclone-zm.herokuapp.com/boards/deleteBoard`, {
-      method: "DELETE",
+      method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
         'Content-type':'application/json',
@@ -192,7 +192,7 @@ export const deleteListRequest = (data) => {
   return (dispatch) => {
     
     fetch('https://trelloclone-zm.herokuapp.com/b/deleteList', {
-      method: "DELETE",
+      method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
         'Content-type':'application/json',
@@ -231,7 +231,7 @@ export const deleteCardRequest = (data) => {
   console.log(data, 73)
   return (dispatch) => {
     fetch('https://trelloclone-zm.herokuapp.com/b/deleteCard', {
-      method: "DELETE",
+      method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
         'Content-type':'application/json',
