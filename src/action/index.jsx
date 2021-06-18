@@ -85,7 +85,7 @@ export const sendBoardToServer = (data) => {
   let adress= /boards\/([a-z1-9]+)/.exec(window.location.href) 
   return (dispatch) => {
     console.log(`bearer ${localStorage.getItem("token")}` )
-    fetch(`https://trelloclone-zm.herokuapp.com${adress[1]}`, {
+    fetch(`https://trelloclone-zm.herokuapp.com/${adress[1]}`, {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
@@ -153,7 +153,7 @@ export const sendListToServer = (data) => {
   let adress= /b\/([a-z1-9]+)/.exec(window.location.href) 
   return (dispatch) => {
      
-    fetch(`${adress[1]}/newList`, {
+    fetch(`https://trelloclone-zm.herokuapp.com/${adress[1]}/newList`, {
       method: "POST",
       headers:{
         'Accept': 'application/json, text/plain',
